@@ -1,0 +1,83 @@
+﻿@model AirlineData.Models.Aircraft
+@{
+    ViewData["Title"] = "e-SkyAirlines - " + Model.Registration;
+}
+<div class="text-center">
+    <h1 class="display-4">Fleet</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="2" >Registration</th>
+                <th rowspan="2" >Base</th>
+                <th rowspan="2" >Icao Type</th>
+                <th rowspan="2" >Passenger Capacity</th>
+                <th rowspan="2" >Cargo Capacity (kg)</th>
+                <th rowspan="2" >Fuel Capacity (kg)</th>
+                <th rowspan="2" >MZFM (kg)</th>
+                <th rowspan="2" >Max Ramp Mass (kg)</th>
+                <th rowspan="2" >MTOM (kg)</th>
+                <th rowspan="2" >MLM (kg)</th>
+                <th rowspan="2" >Dry Operating Mass (kg)</th>
+                <th rowspan="2" >Dry Operating CG</th>
+                <th rowspan="2" >Fuel Performance Factor</th>
+                <th colspan="9" >Fuel On Board</th>
+                <th colspan="9">Position</th>
+            </tr>
+            <tr>
+                <th>Left 1</th>
+                <th>Left 2</th>
+                <th>Right 1</th>
+                <th>Right 2</th>
+                <th>Center</th>
+                <th>Aux 1</th>
+                <th>Aux 2</th>
+                <th>Aux 3</th>
+
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Elevation</th>
+                <th>Pitch</th>
+                <th>Yaw</th>
+                <th>Roll</th>
+                <th>IAS</th>
+                <th>TAS</th>
+                <th>Ground Speed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Registration</td>
+                <td>@Model.IcaoType</td>
+                <td>@Model.PassengerCapacity</td>
+                <td>@Model.CargoCapacity</td>
+                <td>@Model.FuelCapacity</td>
+                <td>@Model.MaxZeroFuelMass</td>
+                <td>@Model.MaxRampMass</td>
+                <td>@Model.MaxTakeoffMass</td>
+                <td>@Model.MaxLandingMass</td>
+                <td>@Model.DryOpertatingMass</td>
+                <td>@Model.DryOpertatingCg</td>
+                <td>@Model.FuelPerformanceFactor</td>
+                <td>@Model.FuelOnBoard[0]</td>
+                <td>@Model.FuelOnBoard[1]</td>
+                <td>@Model.FuelOnBoard[2]</td>
+                <td>@Model.FuelOnBoard[3]</td>
+                <td>@Model.FuelOnBoard[4]</td>
+                <td>@Model.FuelOnBoard[5]</td>
+                <td>@Model.FuelOnBoard[6]</td>
+                <td>@Model.FuelOnBoard[7]</td>
+                <td>@Model.FuelOnBoard[8]</td>
+                <td>@Model.Latitude</td>
+                <td>@Model.Longitude</td>
+                <td>@Model.Elevation</td>
+                <td>@Model.Pitch</td>
+                <td>@Model.Yaw</td>
+                <td>@Model.Roll</td>
+                <td>@Model.Ias</td>
+                <td>@Model.Tas</td>
+                <td>@Model.GroundSpeed</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/Fleet/">Return</a>
+</div>

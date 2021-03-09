@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "e-SkyAirlines - Fleet";
+}
+@model List<AirlineData.Models.Aircraft>
+<div class="text-center">
+    <h1 class="display-4">Fleet</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Registration</th>
+                <th>Icao Type</th>
+                <th>Base</th>
+                <th>Current Location</th>
+                <th>Flight Hours</th>
+                <th>Passenger Capacity</th>
+                <th>Cargo Capacity (kg)</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (AirlineData.Models.Aircraft aircraft in Model)
+            {
+                <tr>
+                    <td>@aircraft.Registration</td>
+                    <td>@aircraft.IcaoType</td>
+                    <td>@aircraft.Base</td>
+                    <td>@aircraft.Base</td>
+                    <td>0.0</td>
+                    <td>@aircraft.PassengerCapacity</td>
+                    <td>@aircraft.CargoCapacity</td>
+                    <td><a href="/Fleet/@aircraft.Registration">Details</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
