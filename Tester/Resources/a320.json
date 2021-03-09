@@ -1,0 +1,10 @@
+{
+    "Aircraft Type" : "A320-214",
+    "Performances" : {
+        "Climb" : "a320/climb_perfo.json",
+        "Cruise": "a320/cruise_perfo.json",
+        "Hold" : "a320/hold_perfo.json",
+        "Descent": null,
+        "Alternate": null
+    }
+}
