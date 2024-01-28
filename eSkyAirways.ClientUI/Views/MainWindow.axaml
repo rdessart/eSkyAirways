@@ -3,18 +3,37 @@
         xmlns:vm="using:eSkyAirways.ClientUI.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:model="clr-namespace:eSkyAirways.ClientUI.Models"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="eSkyAirways.ClientUI.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
+        x:CompileBindings="True"
         Icon="/Assets/avalonia-logo.ico"
         Title="eSkyAirways.ClientUI">
-
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+    <SplitView DisplayMode="CompactInline"
+               IsPaneOpen="{Binding PaneOpen}"
+               OpenPaneLength="100"
+               CompactPaneLength="50">
+        <SplitView.Pane>
+            <StackPanel Orientation="Vertical" 
+                        VerticalAlignment="Stretch">
+                <Button HorizontalAlignment="Stretch" 
+                        HorizontalContentAlignment="Stretch"
+                        Command="{Binding SwitchPaneCommand}">...</Button>
+                <ListBox ItemsSource="{Binding Pages}"
+                         SelectedItem="{Binding SelectedPage}"
+                         SelectionMode="Single">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate x:DataType="model:PageModel">
+                            <TextBlock 
+                                Text="{Binding Caption}" 
+                                HorizontalAlignment="Center" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
+        </SplitView.Pane>
+        <TransitioningContentControl Content="{Binding DisplayPage}">
+        </TransitioningContentControl>
+    </SplitView>
 </Window>
