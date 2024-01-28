@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSkyAirways.ClientUI", "eSkyAirways.ClientUI\eSkyAirways.ClientUI.csproj", "{F406847E-992B-49D6-BB7B-EE05549FF3F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSkyAirways.WebUI", "eSkyAirways.WebUI\eSkyAirways.WebUI.csproj", "{7B8EF993-211F-4299-9DB1-8D7109B01285}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eSkyAirways.Database", "eSkyAirways.Database\eSkyAirways.Database.csproj", "{019C638D-C9FC-4564-A4CC-30E3038202C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F406847E-992B-49D6-BB7B-EE05549FF3F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F406847E-992B-49D6-BB7B-EE05549FF3F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F406847E-992B-49D6-BB7B-EE05549FF3F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F406847E-992B-49D6-BB7B-EE05549FF3F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B8EF993-211F-4299-9DB1-8D7109B01285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B8EF993-211F-4299-9DB1-8D7109B01285}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B8EF993-211F-4299-9DB1-8D7109B01285}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B8EF993-211F-4299-9DB1-8D7109B01285}.Release|Any CPU.Build.0 = Release|Any CPU
+		{019C638D-C9FC-4564-A4CC-30E3038202C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{019C638D-C9FC-4564-A4CC-30E3038202C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{019C638D-C9FC-4564-A4CC-30E3038202C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{019C638D-C9FC-4564-A4CC-30E3038202C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
